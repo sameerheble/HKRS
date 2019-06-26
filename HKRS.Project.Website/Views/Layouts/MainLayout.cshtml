@@ -1,0 +1,30 @@
+﻿@using Sitecore.Mvc
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Placeholder("main")
+    </div>
+
+    @Html.Sitecore().Rendering("{BAE3B611-E00D-48EF-9E3B-959D5DECD5AF}") @*/sitecore/layout/Renderings/HKRS/Feature/PageStructure/Header*@
+
+    @*<div class="l-content-outer">
+        @Html.Sitecore().Placeholder("Hero")
+        @Html.Sitecore().Rendering("{57954800-2E71-430A-A92B-6DD26FE4BE9C}") @*/sitecore/layout/Renderings/HKRS/Feature/Components/Hero
+        @Html.Sitecore().Placeholder("HKRSBreadCrumbs")
+        @Html.Sitecore().Placeholder("Content Layout")
+    </div>*@ <!-- .l-content-outer -->
+
+    @Html.Sitecore().Rendering("{1E8ED1FF-083F-4F91-B35D-83DA3FFEDCCF}") @*/sitecore/layout/Renderings/HKRS/Feature/PageStructure/Footer*@
+</body>
+</html>

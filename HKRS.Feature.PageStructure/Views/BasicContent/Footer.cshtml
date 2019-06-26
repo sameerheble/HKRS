@@ -1,0 +1,12 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model HKRS.Common.Models.AutoGen.sitecore.templates.User_Defined.HKRS.Feature.ISiteHeader
+
+
+<div class="content">
+    <p class="image-wrapper">
+        @Html.Glass().RenderImage(i => i.Logo, isEditable: true)
+    </p>
+    <h1 class="long-title">@Html.Glass().Editable(m => m.Header_Title)</h1>
+</div>
+
+

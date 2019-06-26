@@ -1,0 +1,60 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@model HKRS.Common.Models.AutoGen.sitecore.templates.User_Defined.HKRS.Feature.ISiteHeader
+
+
+<div class="content">
+    <p class="image-wrapper">
+        @Html.Glass().RenderImage(i => i.Logo, isEditable: true)
+    </p>
+    <h1 class="long-title">@Html.Glass().Editable(m => m.Header_Title)</h1>
+</div>
+
+<header class="header" role="banner" aria-label="HKRS WebSite">
+    @if (Model.Logo != null)
+    {
+        @Html.Glass().RenderImage(i => i.Logo, isEditable: true)
+    }
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="description ">
+            <h1>
+                <p>
+                    @if (!string.IsNullOrEmpty(Model.Header_Title))
+                    {
+                        <h1>@Html.Glass().Editable(m => m.Header_Title)</h1>
+
+                    }
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <h4>@Html.Glass().Editable(m => m.Description)</h4>
+                    }
+                </p>
+            </h1>
+        </div>
+    </div>
+</header>
+
+@*<div class="l-header__upper">
+
+        <div class="l-header__identity">
+            <div class="identity-contain">
+                <div class="logo-wrapper">
+
+                    @if (Model.Logo != null)
+                    {
+                        @Html.Glass().RenderImage(i => i.Logo, isEditable: true)
+                    }
+                </div>
+            </div>
+        </div>
+        @if (!string.IsNullOrEmpty(Model.Header_Title))
+        {
+            <div class="l-header__title">
+                <h1>@Html.Glass().Editable(m => m.Header_Title)</h1>
+            </div>
+        }
+
+    </div>*@
+
+
+
